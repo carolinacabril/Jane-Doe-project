@@ -25,7 +25,7 @@ nav ul li{
 }
 
 
-nav ul li a {
+nav>ul>li>a {
     text-decoration: none;
     padding-left: 8px;
     padding-right: 8px;
@@ -54,10 +54,27 @@ footer p {
 }
 
 /* página about  */
-#about,h2,h3,h4,p {
+#about {
     text-align: center;
 }
 
+
 .about-img img {
     width: 300px;
+}
+
+/* página music */
+#music {
+    width: 780px;
+    margin: 0 auto;
+}
+
+#music ul li {
+    text-align: initial;
+}
+
+/* Página contact */
+#contact {
+    width: 780px;
+    margin: 0 auto;
 }
