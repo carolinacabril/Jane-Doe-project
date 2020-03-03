@@ -52,3 +52,12 @@ footer p {
     background-color: #f2f2f2;
     text-align: center;
 }
+
+/* página about  */
+#about,h2,h3,h4,p {
+    text-align: center;
+}
+
+.about-img img {
+    width: 300px;
+}
