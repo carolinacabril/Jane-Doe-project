@@ -78,3 +78,30 @@ footer p {
     width: 780px;
     margin: 0 auto;
 }
+
+/* Home v2 */
+#concept, #songs{
+    width: 900px;
+    margin: 30px auto;
+}
+
+#songs img{
+    width: 100%;
+}
+
+.duas-colunas>div {
+    width: 50%;
+    float: left;
+}
+
+.duas-colunas {
+    overflow: hidden;
+}
+
+#songs ol li {
+    padding: 15px 0;
+}
+
+#songs ol li strong {
+    color: orange;
+}
