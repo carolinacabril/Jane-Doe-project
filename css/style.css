@@ -1,136 +1,307 @@
-body{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Raleway', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+
+
+* {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* header start */
 
 header {
-    border-bottom: 2px solid #ccc;
+  text-align: center;
+  /* border: 2px solid #ccc; */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #f2f2f2;
 }
 
-h1 {
-    text-align: center;
+nav ul {
+  list-style: none;
+  padding-left: 0px;
 }
 
-
-ul {
-    text-align: center;
+nav li {
+  display: inline-block;
+  padding: 10px 20px;
+  /* border: 2px solid black; */
 }
 
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 10px 20px;
+nav li a {
+  text-decoration: none;
+  color: #555;
 }
 
-
-nav>ul>li>a {
-    text-decoration: none;
-    padding-left: 8px;
-    padding-right: 8px;
-    text-align: center;
-    color: #000;
+nav li a.active {
+  font-weight: 700;
+  color: blueviolet;
 }
 
-nav ul li a:hover {
-    color: dimgrey;
+header h1 {
+  text-transform: uppercase;
 }
 
-#banner {
-    width: 100%;
-    height: 77vh;
-    background-image: url('../img/jane.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+/* header end */
+
+main,
+main#contact,
+main#music {
+  margin-top: 134px;
+}
+
+/* footer start */
+
+footer {
+  background-color: #f2f2f2;
 }
 
 footer p {
-    padding: 10px;
-    margin: 0px;
-    background-color: #f2f2f2;
-    text-align: center;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
 }
 
-/* página about  */
-#about {
-    text-align: center;
+/* footer end */
+
+/* banner home */
+
+section#banner {
+  background-image: url('../img/jane.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 73vh;
+  /* viewport height */
 }
 
+/* banner home end */
 
-.about-img img {
-    width: 300px;
+/* about start */
+
+main#about {
+  text-align: center;
+  padding: 30px 0;
 }
 
-/* página music */
-#music {
-    width: 900px;
-    margin: 0 auto;
+main#about h2 {
+  font-size: 30px;
 }
 
-#music ul li {
-    text-align: initial;
+main#about img {
+  width: 450px;
 }
 
-/* Página contact */
-#contact {
-    width: 900px;
-    margin: 0 auto;
+main#about p {
+  margin: 30px 0;
+  line-height: 35px;
 }
 
-/* Home v2 */
-#concept, #songs, #contact{
-    width: 900px;
-    margin: 30px auto;
+main#about cite {
+  font-size: 22px;
+  display: block;
+  font-style: normal;
+  font-weight: 700;
 }
 
-#songs img{
-    width: 100%;
+/* about end */
+/* music start */
+
+main#music {
+  width: 900px;
+  max-width: 100%;
+  margin: 30px auto;
 }
 
-.duas-colunas>div {
-    width: 50%;
-    float: left;
+/* music end */
+
+/* contact end */
+
+main#contact {
+  width: 900px;
+  max-width: 100%;
+  margin: 30px auto;
+}
+
+/* home v2 */
+
+section#concept,
+section#songs {
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+section#songs img {
+  width: 100%;
 }
 
 .duas-colunas {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-#songs ol li {
-    padding: 15px 0;
+.duas-colunas>div {
+  width: 50%;
+  float: left;
 }
 
-#songs ol li strong {
-    color: orange;
+section#songs li {
+  padding: 20px 0;
 }
 
-#form-mapa iframe {
+section#songs li strong {
+  color: orange;
+}
+
+/* contact v2 */
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 5px;
+}
+
+.form-group {
+  margin: 0 0 10px;
+}
+
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+form button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 5px 20px;
+}
+
+.mapa {
+  padding-left: 30px;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 400px;
+}
+
+main,
+{
+  /* margin-top: 134px !important; */
+  margin-top: 135px;
+}
+
+main#contact,
+main#music{
+  margin-top: 170px;
+}
+
+@media(max-width: 768px) {
+  .duas-colunas>div {
     width: 100%;
-    height: 400px;
-    padding-left: 20px;
-}
+  }
 
-#form-mapa input[type="text"], textarea {
+  section#concept,
+  section#songs {
+    padding: 40px;
+  }
+
+  p {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  section#songs ol li {
+    font-size: 26px;
+  }
+
+  nav ul li a {
+    font-size: 24px;
+  }
+
+  main#music {
+    padding: 0 40px;
+  }
+
+  main#music iframe {
     width: 100%;
-    margin: 2px 0 10px;
-    padding: 5px;
-}
+  }
 
-form textarea{
-    resize: none;
-    height: 100px;
-}
-form .form-group {
-    margin: 0 0 10px;
-}
+  main#music ul li {
+    font-size: 24px;
+  }
 
-#btn {
-    border: 0px;
-    background-color: orange;
-    color: #fff;
-    padding: 5px 20px;
+  main#contact {
+    padding: 0 40px;
+  }
+
+  main#contact form {
+    font-size: 24px;
+  }
+
+  main#contact form input {
+    padding: 10px;
+    font-size: 24px;
+  }
+
+  main#contact form button {
+    font-size: 22px;
+    padding: 10px 35px;
+    margin: 20px 0;
+  }
+
+  main#contact .form-group {
+    margin-bottom: 30px;
+  }
+
+  main#contact .mapa {
+    padding: 0;
+  }
+
+  main#contact{
+    padding: 0 40px;
+  }
+
+  main#contact form,
+  main#contact form input,
+  main#contact form textarea{
+    font-size: 24px;
+  }
+
+  main#contact form .form-group{
+    margin-bottom: 20px;
+  }
+  
+  }
+
+  @media(max-width: 414px){
+    main#about img{
+      width: 100%;
+    }
+    main#about{
+      padding: 0px 40px;
+      margin: 0px;
+    }
+    nav ul li a{
+      font-size: 18px;
+    }
 }
 
 
